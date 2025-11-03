@@ -1,0 +1,313 @@
+/* Font dan Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); /* Gradiasi biru-ungu halus */
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s ease; /* Transisi halus */
+}
+
+/* Header dengan gradien */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradiasi ungu-biru */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Main container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search-Filter Bar dengan desain modern */
+#search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px); /* Efek blur untuk modernitas */
+    align-items: center;
+}
+
+#search-filter input, #search-filter select, #search-filter button {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+#search-filter input:focus, #search-filter select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+    outline: none;
+}
+
+#search-filter button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#search-filter button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Wisata List dan Rekomendasi */
+#wisata-list, #rekomendasi-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.wisata-item {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.wisata-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.wisata-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.wisata-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.wisata-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.wisata-item a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.wisata-item a:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #ff8c00 100%);
+}
+
+/* Halaman Detail Wisata */
+#gambar-wisata {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#gambar-wisata img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#gambar-wisata img:hover {
+    transform: scale(1.05);
+}
+
+#deskripsi {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#toggle-deskripsi {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#toggle-deskripsi:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#info-lain {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#info-lain p {
+    margin: 10px 0;
+}
+
+#info-lain a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#info-lain a:hover {
+    text-decoration: underline;
+}
+
+#ulasan-list {
+    margin-top: 20px;
+}
+
+.ulasan-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#tambah-ulasan {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#tambah-ulasan input, #tambah-ulasan textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#tambah-ulasan input:focus, #tambah-ulasan textarea:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+#tambah-ulasan button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#tambah-ulasan button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .wisata-item {
+        width: 100%;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+/* Hal Khusus untuk Wisata ID 1: Gradiasi Pink-Putih dan Warna Pink */
+.special-wisata {
+    background: linear-gradient(135deg, #ffcccc 0%, #ffffff 100%); /* Gradiasi pink-putih */
+    color: #d81b60; /* Warna teks pink gelap */
+}
+
+.special-wisata header {
+    background: linear-gradient(135deg, #00bfff 0%, #9966cb 50%,#ffc6ca 100%); /* Gradiasi pink untuk header */
+}
+
+.special-wisata .wisata-item a, .special-wisata #toggle-deskripsi, .special-wisata #tambah-ulasan button {
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%); /* Aksen pink */
+}
+
+.special-wisata #info-lain a {
+    color: #ff1493;
+}
+
+/* Star Rating Styling */
+#star-rating {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 2em;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star:hover, .star.active {
+    color: #ffd700; /* Warna emas untuk bintang aktif/hover */
+}
+
+.star.active ~ .star {
+    color: #ddd; /* Bintang setelah yang aktif tetap abu */
+}

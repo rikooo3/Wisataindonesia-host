@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Laut Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wisata Laut Indonesia</h1>
+        <p>Jelajahi keindahan pantai dan laut di Indonesia</p>
+    </header>
+
+    <main>
+        <section id="search-filter">
+            <input type="text" id="search-input" placeholder="Cari wisata atau daerah...">
+            <select id="filter-daerah">
+                <option value="">Semua Daerah</option>
+                <!-- Daerah akan diisi oleh JS -->
+            </select>
+            <select id="filter-harga">
+        <option value="">Semua Harga</option>
+        <option value="0-200000">0-200.000</option>
+        <option value="200000-500000">200.000-500.000</option>
+        <option value=">500000">> 500.000</option>
+    </select>
+            <select id="filter-rating">
+                <option value="">Semua Rating</option>
+                <option value="1">1+ Bintang</option>
+                <option value="2">2+ Bintang</option>
+                <option value="3">3+ Bintang</option>
+                <option value="4">4+ Bintang</option>
+                <option value="5">5 Bintang</option>
+            </select>
+            <button id="filter-btn">Filter</button>
+        </section>
+
+        <section id="rekomendasi">
+            <h2>Rekomendasi Wisata</h2>
+            <div id="rekomendasi-list">
+                <!-- Rekomendasi akan diisi oleh JS -->
+            </div>
+        </section>
+
+        <section id="hasil-pencarian">
+            <h2>Hasil Pencarian</h2>
+            <div id="wisata-list">
+                <!-- Hasil pencarian/filter akan diisi oleh JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
