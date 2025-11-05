@@ -290,7 +290,7 @@ main {
     color: #ff1493;
 }
 
-/* Star Rating Styling */
+/* Star Rating Styling - Telah Diperbaiki */
 #star-rating {
     display: flex;
     gap: 5px;
@@ -299,23 +299,39 @@ main {
 
 .star {
     font-size: 2em;
-    color: #ddd; /* Default: Abu-abu */
+    color: #ddd;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-/* Bintang yang memiliki class 'active' akan berwarna emas */
+/* 1. Aturan untuk bintang aktif (yang sudah diklik) */
 .star.active {
-    color: #ffd700; 
+    color: #ffd700; /* Warna emas untuk bintang aktif */
 }
 
-/* Saat mouse di atasnya (Hover), beri warna emas. 
-   Ini hanya untuk efek visual, tidak mengubah class 'active' */
-.star:hover {
-    color: #ffd700; 
-}
-
-/* Opsional: Efek hover pada bintang sebelum yang di-hover */
+/* 2. Aturan saat mouse diarahkan (hover) */
+/* Pastikan bintang saat ini dan bintang sebelumnya menyala saat hover */
+.star:hover,
+.star:hover ~ .star.active, /* Pertahankan warna aktif jika ada */
 .star:hover ~ .star {
-    color: #ddd; /* Pastikan bintang setelah yang di-hover tetap abu-abu */
+    color: #ddd; /* Kembalikan warna abu-abu untuk bintang setelahnya */
 }
+
+/* Ini adalah trik yang penting: pastikan semua bintang SEBELUM bintang yang di-hover menyala */
+.star:hover,
+.star:hover ~ .star { /* Reset semua bintang saat hover */
+    color: #ddd;
+}
+.star:hover,
+.star:hover ~ .star.active { /* Pastikan bintang yang aktif sebelum hover tetap aktif */
+    color: #ffd700;
+}
+/* Kunci utama: Saat di hover, bintang itu sendiri dan SEMUA bintang PRECEDINGnya harus berwarna emas */
+.star:hover,
+#star-rating:hover .star:hover ~ .star {
+    /* Aturan yang lebih ringkas */
+}
+.star.active {
+    color: #ffd700;
+}
+/* Menghilangkan aturan bermasalah dan mengandalkan JavaScript untuk class 'active' */
