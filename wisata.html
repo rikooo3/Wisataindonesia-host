@@ -5,50 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Wisata</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1 id="wisata-nama">Detail Wisata</h1>
-        <a href="index.html">Kembali ke Home</a>
+        <a href="index.html" id="Back" class="back-home-btn">
+            <i class="fas fa-arrow-left"></i> Kembali ke Home
+        </a>
     </header>
 
     <main>
         <section id="gambar-wisata">
-            <!-- Gambar akan diisi oleh JS -->
-        </section>
+            </section>
 
         <section id="deskripsi">
             <h2>Deskripsi</h2>
             <p id="deskripsi-text"></p>
-            <button id="toggle-deskripsi">Tampilkan Lebih Banyak</button>
+            <button id="toggle-deskripsi"><i class="fas fa-angle-down"></i> Tampilkan Lebih Banyak</button>
         </section>
 
         <section id="info-lain">
-            <p><strong>Harga:</strong> <span id="harga"></span></p>
-            <p><strong>Lokasi:</strong> <a id="lokasi" href="#" target="_blank">Lihat di Google Maps</a></p>
-            <p><strong>Rating:</strong> <span id="rating"></span> bintang</p>
-    <div id="ulasan-list">
-        <!-- Ulasan akan diisi oleh JS -->
-    </div>
-    <form id="tambah-ulasan">
-        <label for="nama-input">Nama Anda:</label>
-        <input type="text" id="nama-input" required placeholder="Masukkan nama Anda">
+            <h2>Informasi & Ulasan</h2>
+            <p><strong><i class="fas fa-money-bill-wave"></i> Harga Tiket:</strong> <span id="harga"></span></p>
+            <p><strong><i class="fas fa-map-marker-alt"></i> Lokasi:</strong> <a id="lokasi" href="#" target="_blank">Lihat di Google Maps</a></p>
+            <p><strong><i class="fas fa-star"></i> Rating Rata-rata:</strong> <span id="rating"></span> bintang</p>
+            
+            <h3>Ulasan Pengunjung</h3>
+            <div id="ulasan-list">
+                </div>
+            
+            <form id="tambah-ulasan">
+                <h4>Tambahkan Ulasan Anda</h4>
+                <label for="nama-input">Nama Anda:</label>
+                <input type="text" id="nama-input" required placeholder="Masukkan nama Anda">
+                
+                <label>Rating (klik bintang):</label>
+                <div id="star-rating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="rating-input" value="0"> <label for="ulasan-input">Ulasan:</label>
+                <textarea id="ulasan-input" required placeholder="Tulis ulasan Anda"></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Kirim Ulasan</button>
+            </form>
+        </section>
         
-        <label>Rating (klik bintang):</label>
-        <div id="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
+        <div id="image-modal" class="modal">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content" id="modal-image">
         </div>
-        <input type="hidden" id="rating-input" value="0"> <!-- Hidden input untuk menyimpan rating -->
-        
-        <label for="ulasan-input">Ulasan:</label>
-        <textarea id="ulasan-input" required placeholder="Tulis ulasan Anda"></textarea>
-        <button type="submit">Tambah Ulasan</button>
-    </form>
-</section>
     </main>
 
     <script src="script.js"></script>
